@@ -1,0 +1,23 @@
+<body style="background: lemonchiffon">
+
+<h1 style="color: deepskyblue"><center><b><u>Users List</u></b></center></h1><br>
+
+<table id="myTable" class="table table-hovered" border="1px solid">
+  <tr>
+    <thead class="thead-light">
+    <th style="background: deepskyblue"><h3><u>ID</u></h3></th>
+    <th style="background: deepskyblue"><h3><u>First Name</u></h3></th>
+    <th style="background: deepskyblue"><h3><u>Last Name</u></h3></th>
+    </thead>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <th style="..."><%= link_to user.id, user_photos_path(user.id) %></th>
+      <td style="..."><%= link_to user.first_name, user_photos_path(user.id) %></td>
+      <td style="..."><%= link_to user.last_name,user_photos_path(user.id) %></td>
+    </tr>
+  <% end %>
+</table>
+
+</body>
